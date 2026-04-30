@@ -20,7 +20,7 @@ This project allows users to record civic issues, assign priority, update their 
 
 ## Project Goal
 
-Practice Git using a meaningful public problem tracking project.
+Practice Git and GitHub by building a meaningful public problem tracking project.
 
 ## Tech Stack
 
