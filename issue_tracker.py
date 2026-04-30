@@ -71,3 +71,15 @@ def search_issues(issues, keyword):
 
 def get_open_issues(issues):
     return [issue for issue in issues if issue["status"] == "open"]
+
+def count_issues_by_priority(issues):
+    report = {
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+    }
+
+    for issue in issues:
+        report[issue["priority"]] += 1
+
+    return report

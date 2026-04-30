@@ -4,6 +4,7 @@ from issue_tracker import (
     update_issue_status,
     search_issues,
     get_open_issues,
+    count_issues_by_priority,
 )
 from storage import load_issues, save_issues
 
@@ -26,7 +27,8 @@ def show_menu():
     print("3. Update issue status")
     print("4. Search issues")
     print("5. View open issues")
-    print("6. Exit")
+    print("6. View priority report")
+    print("7. Exit")
 
 
 def handle_add_issue(issues):
@@ -100,6 +102,16 @@ def handle_view_open_issues(issues):
         print_issue(issue)
 
 
+def handle_priority_report(issues):
+    report = count_issues_by_priority(issues)
+
+    print("\nPriority Report")
+    print("---------------")
+    print(f"Low: {report['low']}")
+    print(f"Medium: {report['medium']}")
+    print(f"High: {report['high']}")
+
+
 def main():
     issues = load_issues()
 
@@ -123,6 +135,9 @@ def main():
             handle_view_open_issues(issues)
 
         elif choice == "6":
+            handle_priority_report(issues)
+
+        elif choice == "7":
             print("Goodbye.")
             break
 
