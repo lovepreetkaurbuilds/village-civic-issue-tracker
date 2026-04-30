@@ -20,7 +20,7 @@ This project allows users to record civic issues, assign priority, update their 
 
 ## Project Goal
 
-Build a meaningful real-world Python project while learning Git and GitHub from beginner to advanced level.
+Build a civic issue tracker while learning Git and GitHub practically.
 
 ## Tech Stack
 
