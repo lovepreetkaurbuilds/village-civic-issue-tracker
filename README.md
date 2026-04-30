@@ -32,3 +32,7 @@ Practice Git and GitHub by building a meaningful public problem tracking project
 ## Version
 
 Current version: v0.1
+
+## What I Learned
+
+Through this project, I learned how to use Git and GitHub in a practical developer workflow. I practiced commits, branches, pull requests, merge conflict resolution, pytest testing, GitHub Actions CI, version tags, and GitHub releases.
