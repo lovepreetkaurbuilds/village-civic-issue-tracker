@@ -28,3 +28,7 @@ Build a meaningful real-world Python project while learning Git and GitHub from 
 - JSON file storage
 - Git
 - GitHub
+
+## Version
+
+Current version: v0.1
