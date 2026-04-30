@@ -68,3 +68,6 @@ def search_issues(issues, keyword):
             results.append(issue)
 
     return results
+
+def get_open_issues(issues):
+    return [issue for issue in issues if issue["status"] == "open"]

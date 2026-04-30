@@ -1,4 +1,10 @@
-from issue_tracker import add_issue, list_issues, update_issue_status, search_issues
+from issue_tracker import (
+    add_issue,
+    list_issues,
+    update_issue_status,
+    search_issues,
+    get_open_issues,
+)
 from storage import load_issues, save_issues
 
 
@@ -19,7 +25,8 @@ def show_menu():
     print("2. View all issues")
     print("3. Update issue status")
     print("4. Search issues")
-    print("5. Exit")
+    print("5. View open issues")
+    print("6. Exit")
 
 
 def handle_add_issue(issues):
@@ -82,6 +89,17 @@ def handle_search(issues):
         print_issue(issue)
 
 
+def handle_view_open_issues(issues):
+    open_issues = get_open_issues(issues)
+
+    if not open_issues:
+        print("No open issues found.")
+        return
+
+    for issue in open_issues:
+        print_issue(issue)
+
+
 def main():
     issues = load_issues()
 
@@ -91,15 +109,23 @@ def main():
 
         if choice == "1":
             handle_add_issue(issues)
+
         elif choice == "2":
             handle_view_issues(issues)
+
         elif choice == "3":
             handle_update_status(issues)
+
         elif choice == "4":
             handle_search(issues)
+
         elif choice == "5":
+            handle_view_open_issues(issues)
+
+        elif choice == "6":
             print("Goodbye.")
             break
+
         else:
             print("Invalid choice. Please try again.")
 
