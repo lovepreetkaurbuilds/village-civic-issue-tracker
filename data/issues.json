@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "title": "Broken streetlight near school",
+        "category": "Streetlight",
+        "location": "Near government school",
+        "priority": "high",
+        "status": "solved"
+    }
+]
